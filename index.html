@@ -215,17 +215,11 @@
   justify-content:center;
 }
 
-.photo-slider img,
-.photo-slider video {
-  display: block;
-  margin: 10px auto;
-  max-width: 360px;    /* control max width */
-  width: 100%;
-  aspect-ratio: 16 / 9; /* keeps YouTube-like ratio */
-  object-fit: cover;   /* crop edges if needed */
-  border-radius: 12px;
-  background: #000;    /* black frame like player */
-  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+.photo-slider img {
+  max-width:300px; 
+  border-radius:12px; 
+  margin:10px;
+  box-shadow:0 0 12px rgba(0,0,0,0.4);
 }
 
 /* Prev/Next buttons */
@@ -360,8 +354,7 @@
   <section id="gallery">    
   <h2>Gallery</h2>    
   <div class="tabs">    
-    <button onclick="openTab('photos')">Photos</button>    
-    <button onclick="openTab('videos')">Videos</button>    
+    <button onclick="openTab('photos')">Photos</button>   
   </div>    
 
   <!-- Photos Slider -->
