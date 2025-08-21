@@ -215,8 +215,12 @@
   justify-content:center;
 }
 
-.photo-slider img {
-  max-width:300px; 
+.photo-slider img,
+.photo-slider video {
+  width:100%; 
+  max-width:600px;     /* make bigger than 300px */
+  aspect-ratio:16/9;   /* enforce same shape */
+  object-fit:cover;    /* crop inside box */
   border-radius:12px; 
   margin:10px;
   box-shadow:0 0 12px rgba(0,0,0,0.4);
@@ -258,6 +262,7 @@
   transition:0.3s;
 }
 .close-gallery:hover { background:#ff66aa; }
+
 
     /* APPOINTMENT */
     form { display:flex; flex-direction:column; gap:15px; }
