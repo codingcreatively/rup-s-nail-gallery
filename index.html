@@ -259,6 +259,12 @@
 }
 .close-gallery:hover { background:#ff66aa; }
 
+    img, .memory-image {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
 
     /* APPOINTMENT */
     form { display:flex; flex-direction:column; gap:15px; }
@@ -497,6 +503,14 @@ function changePhoto(direction) {
       span.style.animationDelay=(Math.random()*5)+"s";
       bubbles.appendChild(span);
     }
+
+
+    document.addEventListener("contextmenu", e => e.preventDefault());
+document.addEventListener("selectstart", e => e.preventDefault());
+
+["copy", "cut", "paste"].forEach(event =>
+  document.addEventListener(event, e => e.preventDefault())
+);
   </script>
 </body>
 </html>
