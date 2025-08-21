@@ -218,12 +218,13 @@
 .photo-slider img,
 .photo-slider video {
   width:100%; 
-  max-width:600px;     /* make bigger than 300px */
-  aspect-ratio:16/9;   /* enforce same shape */
-  object-fit:cover;    /* crop inside box */
+  max-width:480px;      /* medium box (not too big) */
+  aspect-ratio:16/9;    /* YouTube style ratio */
+  object-fit:cover;     /* crop if needed */
   border-radius:12px; 
-  margin:10px;
+  margin:10px auto;
   box-shadow:0 0 12px rgba(0,0,0,0.4);
+  display:block;
 }
 
 /* Prev/Next buttons */
